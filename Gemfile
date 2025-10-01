@@ -41,3 +41,5 @@ group :production do
   gem 'pg', '~> 1.1' # for Heroku deployment
   gem 'rails_12factor'
 end
+
+gem "puma", "~> 7.0"
