@@ -27,19 +27,18 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'guard-rspec'
 
-  # Use sqlite3 as the database for Active Record
-  gem 'sqlite3', '~> 2.1'
-
-end
-
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> in views
   # gem 'web-console', '~> 2.0'
 end
 
+
 group :production do
-  gem 'pg', '~> 1.1' # for Heroku deployment
-  gem 'rails_12factor'
+  gem "pg", "~> 1.5"  
+end
+
+group :development, :test do
+  gem "sqlite3", "~> 2.1"
 end
 
 gem "puma", "~> 7.0"
