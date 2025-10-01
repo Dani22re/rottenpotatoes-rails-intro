@@ -2,43 +2,28 @@ source 'https://rubygems.org'
 
 ruby '3.3.8'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+# Rails
 gem 'rails', '8.0'
 
-# Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
-# Use jquery as the JavaScript library
 gem 'jquery-rails'
 
-
-# Use Unicorn as the app server
-# gem 'unicorn'
-
 gem 'themoviedb'
-
-# Window support
 gem 'tzinfo'
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw]
 
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-
-  gem 'rspec-rails'
-  gem 'guard-rspec'
-
-group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  # gem 'web-console', '~> 2.0'
-end
-
+gem 'puma', '~> 7.0'
 
 group :production do
-  gem "pg", "~> 1.5"  
+  gem 'pg', '~> 1.5'   # ok if you prefer '~> 1.1'
 end
 
 group :development, :test do
-  gem "sqlite3", "~> 2.1"
+  gem 'sqlite3', '~> 2.1'
+  gem 'byebug'
+  gem 'rspec-rails'
+  gem 'guard-rspec'
 end
 
-gem "puma", "~> 7.0"
+group :development do
+end
